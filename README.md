@@ -15,3 +15,31 @@
 ```bash
 go mod tidy
 go run .
+
+cat >> README.md << 'EOF'
+
+## Accessing the Application
+
+After running the Go program, the server will start on **port 8080**. You can access the application through your web browser or API client:
+
+### Web Interface
+- **Main API**: http://localhost:8080
+- **Health Check**: http://localhost:8080/health
+
+### API Endpoints
+- **Products**: `GET http://localhost:8080/api/v1/demo/products`
+- **Pricing**: `GET http://localhost:8080/api/v1/demo/pricing`
+- **Create Quote**: `POST http://localhost:8080/api/v1/demo/quote`
+- **List Quotes**: `GET http://localhost:8080/api/v1/demo/quotes`
+
+### Testing with curl
+```bash
+# Check if the server is running
+curl http://localhost:8080/health
+
+# Get available products
+curl http://localhost:8080/api/v1/demo/products
+
+# Get pricing information
+curl http://localhost:8080/api/v1/demo/pricing
+
