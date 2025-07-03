@@ -16,8 +16,6 @@
 go mod tidy
 go run .
 
-cat >> README.md << 'EOF'
-
 ## Accessing the Application
 
 After running the Go program, the server will start on **port 8080**. You can access the application through your web browser or API client:
@@ -43,3 +41,5 @@ curl http://localhost:8080/api/v1/demo/products
 # Get pricing information
 curl http://localhost:8080/api/v1/demo/pricing
 
+
+cat >> README.md << 'EOF'
